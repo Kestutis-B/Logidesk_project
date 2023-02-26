@@ -32,9 +32,6 @@
             <main>
                 <div class="container main-content-container">
                     @yield('content')
-                    <div class="d-flex justify-content-center">
-                        <img src="https://lh3.googleusercontent.com/Nd0ecj1ioiDG3AmmAlOdctcpojC7VA5WlPFWH7j4OLpQczpMjgAlYxIk54xoWuWalbuciLgE1AeMlbh2mx-dsZVhaBwyp6HikNHagjt0LsAwbKAi2mWuo7Dr80D4_pkh9nurQr_1shLvWAGhK1qzVM3k15Ek7PeJbevmbai8gQxkBRkIgJtwp2HMDXgHDur_GA7ms4qm3RkAKwT_E-9ya161hJFuLGYLhX8Ht6I3Q0llVTKsLY_jfI_h9OOOMMLAuOdblZFbMp_kh3-HF3Fbf39ygpAFoz-EBbB-CBrh2SM-gg97EF1XtUuqPBtig10bnicR78kiS1MdFFw9GEGT3QgFOKWdcIdNGIBqGnaO0V0HlJ7VEeJCe8gjoylwtG_IHMNsVqHTdBcQFw5ThF4e8l_1iS8m5Xv0Z8xR_E4L5wSPUj-qp9ieyJdQcqa4zyTDopubCdA0tESQZsrfzfHX3iKxmwxU-qX6h1a37__56L_669wrAO0O0XeByeDdQ4Jc0A0qW-t-wnFtyQl8kwj5BkucrTGQMC6h7elfEF61WaMieasgRV6G2j3iaoN59rHEeEmujX8jOEdOAQblYZEuBsRP_ggMU_2OAj8oKvfAWTs6GqDZFSeGvM5kSd-E2dZv3ugdwfgWsa_SIGeFNo3jkOhneC-h1efdVFYa79Np37T_7HxgSrtBxjGnP7GQYEgD3pSmBUGSAkod4m8UHwjsHGUx3y-l5PLirMB8bLGC9WNv5ivV4gt3R5bDKs3hKl57LWeS7-9-CX3vo9Z1av6qpb0G3z9xLAMHEBaMQZwcNbKx8TVw6cqIyxyqJ9QlWT288nrKglvR60BBoQOOLLSPCjxzxnJ1WHI4t_oI_lObFnc-uiru6y9ZnLZkQSxAWGfUCxlfJDHs180geZwKYBqOBQGEg1LbEtylS5naMccXL9WUNFl8=w804-h220-no?authuser=0" alt="no img">
-                    </div>
                 </div>
             </main>
         </div>
