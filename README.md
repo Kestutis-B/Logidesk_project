@@ -9,7 +9,7 @@
     - Sign up Form - full name, company name, Customer or Carrier->dropdown, email, phone number, password.
     - Do you need help? Contacts bellow - email.
 + Open Orders List Page
-    - All orders list (Table. Columns: ID, Order status Active=1, Loading place->city, Unloading place->city, Loading date, Order Created at, Price, Carrier, View Details button)
+    - All orders list (Table. Columns: ID, userId, Loading place->city, Unloading place->city, Loading date, Order Created, Price, Carrier, View Details button)
     - Search order by one of the fields.
 + Finished Orders List Page
     - All orders list (Table. Columns: ID, Order status Active=0, Loading place->city, Unloading place->city, Loading date, Order Created at, Price, Carrier, View Details button)

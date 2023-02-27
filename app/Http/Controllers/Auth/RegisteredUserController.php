@@ -44,8 +44,6 @@ class RegisteredUserController extends Controller
             'companyname' => $request->companyname
         ]);
 
-        $user->companyname = $request->companyname;
-        $user->save();
 
         event(new Registered($user));
 
