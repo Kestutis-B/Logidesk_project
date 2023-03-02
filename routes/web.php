@@ -32,7 +32,12 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/orders', [OrdersController::class, 'index'])->name('orders.index');
     Route::get('/orders/create', [OrdersController::class, 'create'])->name('orders.create');
+    Route::get('/orders/{id}', [OrdersController::class, 'show'])->name('orders.show');
     Route::post('/orders/store', [OrdersController::class, 'store'])->name('orders.store');
+    Route::get('/orders/{id}/edit', [OrdersController::class, 'edit'])->name('orders.edit');
+    Route::put('/orders/{id}/update', [OrdersController::class, 'update'])->name('orders.update');
+    Route::delete('/orders/{id}/delete', [OrdersController::class, 'destroy'])->name('orders.destroy');
+
 });
 
 require __DIR__.'/auth.php';
