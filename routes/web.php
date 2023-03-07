@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\OrdersController;
+use \App\Http\Controllers\OffersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function() {
+    //Orders
     Route::get('/orders', [OrdersController::class, 'index'])->name('orders.index');
     Route::get('/orders/create', [OrdersController::class, 'create'])->name('orders.create');
     Route::get('/orders/{id}', [OrdersController::class, 'show'])->name('orders.show');
@@ -38,6 +40,9 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::put('/orders/{id}/update', [OrdersController::class, 'update'])->name('orders.update');
     Route::delete('/orders/{id}/delete', [OrdersController::class, 'destroy'])->name('orders.destroy');
 
+    //Offers
+    Route::post('/offers/{ordersId}/store', [OffersController::class, 'store'])->name('offers.store');
+    Route::post('/offers/{offersId}/update', [OffersController::class, 'update'])->name('offers.update');
 });
 
 require __DIR__.'/auth.php';

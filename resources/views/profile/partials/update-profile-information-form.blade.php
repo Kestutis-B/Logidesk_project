@@ -1,4 +1,4 @@
-<section>
+<section class="update_list_container">
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             {{ __('Profile Information') }}
@@ -54,8 +54,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button style="background-color: darkblue">{{ __('Save') }}</x-primary-button>
-
+            <button class="btn btn-outline-primary">Save</button>
             @if (session('status') === 'profile-updated')
                 <p
                     x-data="{ show: true }"

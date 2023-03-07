@@ -3,9 +3,12 @@
 @section('title', 'Orders')
 
 @section('content')
-    <div class="d-flex justify-content-end">
-        <a href="{{ url('/orders/create') }}" class="btn btn-outline-primary">Create Order</a>
-    </div>
+    @if((auth()->user()->id == 1) || (auth()->user()->id == 2))
+        <div class="d-flex justify-content-end">
+            <a href="{{ url('/orders/create') }}" class="btn btn-outline-primary">Create Order</a>
+        </div>
+    @endif
+    <div style="text-align: center; padding: 20px"><h2>All Orders</h2></div>
     <div>
         <table>
             <tr>
@@ -24,7 +27,7 @@
             @foreach($orders as $order)
                 <tr>
                     <td>{{ $order->id }}</td>
-                    <td>{{ $order->user_id }}</td>
+                    <td>{{ $order->user->name }}</td>
                     <td>{{ $order->loading_place }}</td>
                     <td>{{ $order->unloading_place }}</td>
                     <td>{{ $order->loading_date }}</td>
@@ -40,11 +43,13 @@
                                 @method('GET')
                                 <button class="btn btn-outline-primary">Info</button>
                             </form>
-                            <form method="post" action="{{ route('orders.destroy', $order->id) }}">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-outline-danger">Delete</button>
-                            </form>
+                            @if((auth()->user()->id == $order->user_id))
+                                <form method="post" action="{{ route('orders.destroy', $order->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                </form>
+                            @endif
                         </div>
                     </td>
                 </tr>

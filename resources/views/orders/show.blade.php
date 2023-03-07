@@ -7,6 +7,9 @@
     <form method="POST" action="{{ route('orders.update', $orders->id) }}">
         @csrf
         @method('PUT')
+        <div style="text-align: end">
+            Order created by: {{ $customerName }}
+        </div>
         <div class="form-group">
             <label for="loading_place">Loading place</label>
             <input type="text" name="loading_place"  value="{{ $orders->loading_place }}" class="form-control">
@@ -31,7 +34,16 @@
             <label for="order_status">Order status</label>
             <input type="text" value="{{ $orders->order_status }}" name="order_status" class="form-control">
         </div>
-        <button type="submit" class="btn btn-outline-primary">Update</button>
+        @if((auth()->user()->id == $orders->user_id))
+            <div style="text-align: end">
+                <button type="submit" class="btn btn-outline-primary">Update</button>
+            </div>
+        @endif
     </form>
 </div>
+
+    @include('offers.create')
+    @include('offers.offers')
+
+
 @endsection
